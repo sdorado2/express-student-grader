@@ -2,7 +2,12 @@ const React = require("react");
 
 class Index extends React.Component {
   render() {
-    return <div>Index</div>;
+    const students = this.props;
+    return (
+      <div>
+        <h1>{students.name}</h1>
+      </div>
+    );
   }
 }
 
