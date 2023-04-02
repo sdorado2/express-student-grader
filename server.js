@@ -12,7 +12,6 @@ app.get("/", (req, res) => {
 
 app.get("/students", (req, res) => {
   res.render("Index", { students: students });
-  // console.log("🚀  app.set  students:", students);
 });
 
 app.listen(PORT, () => console.log(`${PORT} is listing!`));
