@@ -21,7 +21,7 @@ class Index extends React.Component {
               index
             );
             return (
-              <tr>
+              <tr key={student.name}>
                 <td>
                   <a href={`/students/${index}`}>{student.name}</a>
                 </td>
