@@ -23,4 +23,9 @@ app.get("/students/:student", (req, res) => {
   res.render("Show", { student: students[req.params.student] });
 });
 
+app.post("/students", (req, res) => {
+  students.push(req.body);
+  res.redirect("/students");
+});
+
 app.listen(PORT, () => console.log(`${PORT} is listing!`));
