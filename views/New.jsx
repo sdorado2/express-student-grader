@@ -5,8 +5,10 @@ class New extends React.Component {
     return (
       <div>
         <form action="/students" method="POST">
-          <input type="text" name="Student"></input>
-          <input type="text" name="Grade"></input>
+          Student Name : <input type="text" name="Student" />
+          <br />
+          Student Grade : <input type="text" name="Grade" />
+          <br />
           <input type="submit" value="Enter Student"></input>
         </form>
       </div>
