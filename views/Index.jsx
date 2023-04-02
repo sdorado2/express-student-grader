@@ -23,6 +23,10 @@ class Index extends React.Component {
               "🚀  file: Index.jsx:19  Index  {students.map  num:",
               index
             );
+            console.log(
+              "🚀  file: Index.jsx:28  {students.map  student:",
+              student
+            );
             return (
               <tr key={student.name}>
                 <td>

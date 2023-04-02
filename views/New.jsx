@@ -9,7 +9,7 @@ class New extends React.Component {
           <br />
           Student Grade : <input type="text" name="Grade" />
           <br />
-          <input type="submit" value="Enter Student"></input>
+          <input type="submit" value="Enter Student" />
         </form>
       </div>
     );

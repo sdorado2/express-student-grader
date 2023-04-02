@@ -5,7 +5,7 @@ const students = require("./models/student");
 
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {
   console.log("Running");
   next();
@@ -29,6 +29,7 @@ app.get("/students/:student", (req, res) => {
 
 app.post("/students", (req, res) => {
   students.push(req.body);
+  console.log("🚀  file: server.js:32  app.post  students:", students);
   res.redirect("/students");
 });
 
