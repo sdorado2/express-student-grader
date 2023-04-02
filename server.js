@@ -14,6 +14,10 @@ app.get("/students", (req, res) => {
   res.render("Index", { students: students });
 });
 
+app.get("/student/new", (req, res) => {
+  res.render("New");
+});
+
 app.get("/students/:student", (req, res) => {
   res.render("Show", { student: students[req.params.student] });
 });
