@@ -21,15 +21,13 @@ class Index extends React.Component {
               index
             );
             return (
-              <div key={student.name}>
-                <tr>
-                  <td>
-                    <a href={`/students/${index}`}>{student.name}</a>
-                  </td>
-                  &nbsp;
-                  <td>{student.grade}</td>
-                </tr>
-              </div>
+              <tr>
+                <td>
+                  <a href={`/students/${index}`}>{student.name}</a>
+                </td>
+                &nbsp;
+                <td>{student.grade}</td>
+              </tr>
             );
           })}
         </table>

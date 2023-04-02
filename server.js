@@ -6,6 +6,10 @@ const students = require("./models/student");
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
 app.use(express.urlencoded({ extended: false }));
+app.use((req, res, next) => {
+  console.log("Running");
+  next();
+});
 
 app.get("/", (req, res) => {
   res.send("TEST VIEW");
