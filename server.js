@@ -14,4 +14,8 @@ app.get("/students", (req, res) => {
   res.render("Index", { students: students });
 });
 
+app.get("/students/:student", (req, res) => {
+  res.render("Show", { student: students[req.params.students] });
+});
+
 app.listen(PORT, () => console.log(`${PORT} is listing!`));
