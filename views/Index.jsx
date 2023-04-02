@@ -15,12 +15,16 @@ class Index extends React.Component {
             <th>Student</th>
             <th>Grade</th>
           </tr>
-          {students.map((student) => {
+          {students.map((student, index) => {
+            console.log(
+              "🚀  file: Index.jsx:19  Index  {students.map  num:",
+              index
+            );
             return (
               <div key={student.name}>
                 <tr>
                   <td>
-                    <a href={`/students/${student}`}>{student.name}</a>
+                    <a href={`/students/${index}`}>{student.name}</a>
                   </td>
                   &nbsp;
                   <td>{student.grade}</td>
