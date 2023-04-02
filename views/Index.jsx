@@ -10,6 +10,9 @@ class Index extends React.Component {
     return (
       <div>
         <h1>Student Grade Book</h1>
+        <a href="/students/new">
+          <button>New Student</button>
+        </a>
         <table>
           <tr>
             <th>Student</th>
