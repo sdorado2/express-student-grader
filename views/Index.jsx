@@ -17,9 +17,11 @@ class Index extends React.Component {
           </tr>
           {students.map((student) => {
             return (
-              <div>
+              <div key={student.name}>
                 <tr>
-                  <td>{student.name}</td>
+                  <td>
+                    <a href={`/students/${student}`}>{student.name}</a>
+                  </td>
                   &nbsp;
                   <td>{student.grade}</td>
                 </tr>

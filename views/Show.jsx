@@ -1,9 +1,14 @@
 const React = require("react");
 
 class Show extends React.Component {
-    const {student} = this.props;
-
-  render() {}
+  render() {
+    const { student } = this.props;
+    return (
+      <div>
+        <h1>{student.name}</h1>
+      </div>
+    );
+  }
 }
 
 module.exports = Show;
