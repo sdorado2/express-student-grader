@@ -5,9 +5,9 @@ class New extends React.Component {
     return (
       <div>
         <form action="/students" method="POST">
-          Student Name : <input type="text" name="Student" />
+          Student Name : <input type="text" name="name" />
           <br />
-          Student Grade : <input type="text" name="Grade" />
+          Student Grade : <input type="number" min="1" name="grade" />
           <br />
           <input type="submit" value="Enter Student" />
         </form>
