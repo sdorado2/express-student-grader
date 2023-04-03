@@ -5,11 +5,12 @@ const students = require("./models/student");
 
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 app.use((req, res, next) => {
   console.log("Running");
   next();
 });
-app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   res.send("TEST VIEW");

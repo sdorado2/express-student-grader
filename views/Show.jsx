@@ -9,7 +9,12 @@ class Show extends React.Component {
       <div>
         <h1>{student.name}</h1>
         <hr />
+        <h4>GRADE</h4>
         <span>{student.grade}</span>
+        <hr />
+        <a href="/students">
+          <button>BACK</button>
+        </a>
       </div>
     );
   }

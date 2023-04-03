@@ -7,7 +7,7 @@ class New extends React.Component {
         <form action="/students" method="POST">
           Student Name : <input type="text" name="name" />
           <br />
-          Student Grade : <input type="number" min="1" name="grade" />
+          Student Grade : <input type="number" min="1" max="100" name="grade" />
           <br />
           <input type="submit" value="Enter Student" />
         </form>
