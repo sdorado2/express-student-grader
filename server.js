@@ -2,18 +2,19 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 const students = require("./models/student");
+const path = require("path");
 
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use("/static", express.static("public"));
 app.use((req, res, next) => {
   console.log("Running");
   next();
 });
 
 app.get("/", (req, res) => {
-  res.send("TEST VIEW");
+  res.sendFile(path.join(__dirname + "/public/index.html"));
 });
 
 app.get("/students", (req, res) => {

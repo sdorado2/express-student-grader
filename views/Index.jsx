@@ -11,7 +11,7 @@ class Index extends React.Component {
       <div>
         <h1>Student Grade Book</h1>
         <a href="/students/new">
-          <button>New Student</button>
+          <button className="btn">New Student</button>
         </a>
         <table>
           <tr>
